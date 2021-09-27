@@ -1,0 +1,116 @@
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+body {
+    background-image: url("../assets/background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    position: relative;
+}
+
+#content{
+    background-color: whitesmoke;
+    border: 1px solid #c6c6c6;
+
+    position: relative;
+    top: 10%;
+    left: 15%;
+    height: 80%;
+    width: 70%;
+
+    -webkit-box-shadow: -1px -1px 27px 15px #080808;
+    box-shadow: -1px -1px 27px 15px #080808;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------- Introduction Div Style ------- */
+#introduction{
+    border-right: 3px solid #cdcdcd;
+    width: 50%;
+    padding: 20px;
+}
+/* -- Image --*/
+#introduction .pro-image{
+    height: 50%;
+    width: 75%;
+    margin: auto;
+}
+#introduction .pro-image img{
+    height: 95%;
+    width: 100%;
+    border-radius: 30px;
+}
+#introduction .pro-image img:hover{
+    cursor: pointer;
+}
+
+/* -- Table Content --*/
+#introduction .intro-content{
+    margin-top: 10px;
+    overflow-y: auto;
+    height: 50%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#introduction .intro-content table{
+    width: 100%;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+#introduction .intro-content table caption{
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#introduction .intro-content table tr{
+    line-height: 30px;
+}
+#introduction .intro-content table .label{
+    text-align: left;
+    font-weight: 600;
+
+}
+#introduction .intro-content table .divider{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* ------- List Div Style ------- */
+#list{
+    width: 50%;
+    padding: 20px;
+}
+#list .content{
+    overflow-y: auto;
+    margin-top: 10px;
+}
+/* -- List Style --*/
+#list .content li{
+    margin-bottom: 10px;
+}
+#list .content a{
+    text-decoration: none;
+    font-size: 17px;
+}
+#list .content a:hover{
+    color: red;
+}
+
+/* ------- Validator logo ------- */
+#validator_logo{
+    position: absolute;
+    top: 0;
+    right: 2%;
+    /*width: ;*/
+}
