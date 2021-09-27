@@ -16,7 +16,7 @@ body {
 /* ------- Validator logo ------- */
 #validator_logo{
     position: absolute;
-    top: 2%;
+    bottom: 0.5%;
     right: 1%;
 }
 #validator_logo img{
@@ -90,11 +90,13 @@ body {
 #introduction .intro-content table .label{
     text-align: left;
     font-weight: 600;
-
 }
 #introduction .intro-content table .divider{
     padding-left: 10px;
     padding-right: 10px;
+}
+#introduction .intro-content table a{
+    text-decoration: none;
 }
 
 /* ------- List Div Style ------- */
