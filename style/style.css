@@ -13,7 +13,18 @@ body {
     -o-background-size: 100%;
     position: relative;
 }
+/* ------- Validator logo ------- */
+#validator_logo{
+    position: absolute;
+    top: 2%;
+    right: 1%;
+}
+#validator_logo img{
+    width: 120px;
+    height: 50px;
+}
 
+/* ------- Content Style ------- */
 #content{
     background-color: whitesmoke;
     border: 1px solid #c6c6c6;
@@ -105,12 +116,4 @@ body {
 }
 #list .content a:hover{
     color: red;
-}
-
-/* ------- Validator logo ------- */
-#validator_logo{
-    position: absolute;
-    top: 0;
-    right: 2%;
-    /*width: ;*/
 }
