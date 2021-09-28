@@ -197,22 +197,22 @@ body {
 }
 
 /* --- Top Border --- */
-#movies_list, #moods_div, #fun_facts_div{
+#movies_list, #movies_reverse_list, #moods_div, #fun_facts_div{
     border-top: 2px solid #137472;
 }
 
 /* -- Movie List --*/
-#movies_list .list-div{
+#movies_list .list-div, #movies_reverse_list .list-div{
     width: 40%;
     text-align: left;
 }
 
 /* ToolTip */
-#movies_list .tooltip {
+#movies_list .tooltip, #movies_reverse_list .tooltip {
     position: relative;
     display: inline-block;
 }
-#movies_list .tooltip .tooltiptext {
+#movies_list .tooltip .tooltiptext, #movies_reverse_list .tooltip .tooltiptext {
     visibility: hidden;
     width: 500px;
     background-color: black;
@@ -226,7 +226,7 @@ body {
     left: 0;
     margin-left: -60px;
 }
-#movies_list .tooltip .tooltiptext::after {
+#movies_list .tooltip .tooltiptext::after, #movies_reverse_list .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -236,7 +236,7 @@ body {
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
-#movies_list .tooltip:hover .tooltiptext {
+#movies_list .tooltip:hover .tooltiptext, #movies_reverse_list .tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
