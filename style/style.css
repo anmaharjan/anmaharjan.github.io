@@ -154,9 +154,11 @@ body {
 
 #content.about-me-content .list-div a{
     text-decoration: none;
+    color: red;
 }
 #content.about-me-content .list-div a:hover{
     color: #036aa0;
+    text-decoration: underline;
 }
 
 /* -- List Style-- */
@@ -169,6 +171,15 @@ body {
     text-transform: capitalize;
     font-weight: normal;
 }
+.about-me-content .list-div dl{
+    text-align: left;
+    margin-top: 0;
+    font-size: 15px;
+}
+.about-me-content .list-div dl dt{
+    color: #00781b;
+    font-weight: 800;
+}
 
 /* -- Small Intro --*/
 #content.about-me-content > #formal_intro{
@@ -176,6 +187,10 @@ body {
 }
 .about-me-content h1, .about-me-content p{
     width: 100%;
+}
+.about-me-content h1, .about-me-content p:first-letter{
+    font-size: 40px;
+    font-weight: 500;
 }
 .about-me-content h1{
     color: #990000;
@@ -189,7 +204,7 @@ body {
 /* -- Movie List --*/
 #movies_list .list-div{
     width: 40%;
-    text-align: center;
+    text-align: left;
 }
 
 /* ToolTip */
