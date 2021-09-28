@@ -1,7 +1,8 @@
 html, body {
     margin:0;
     padding:0;
-    height:100%;
+    min-height:100%;
+    height: auto;
 }
 
 body {
@@ -16,24 +17,32 @@ body {
 /* ------- Validator logo ------- */
 #validator_logo{
     position: absolute;
-    bottom: 0.5%;
+    bottom: 0%;
     right: 1%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 }
 #validator_logo img{
     width: 120px;
     height: 50px;
 }
 
+/* ---------------------- Index Page ----------------------- */
 /* ------- Content Style ------- */
 #content{
     background-color: whitesmoke;
     border: 1px solid #c6c6c6;
 
-    position: relative;
-    top: 10%;
-    left: 15%;
+    /*position: relative;*/
+    /*top: 10%;*/
+    /*left: 15%;*/
     height: 80%;
     width: 70%;
+    margin: 5vh auto;
 
     -webkit-box-shadow: -1px -1px 27px 15px #080808;
     box-shadow: -1px -1px 27px 15px #080808;
@@ -118,4 +127,150 @@ body {
 }
 #list .content a:hover{
     color: red;
+}
+
+/* ---------------------- About Me Page ----------------------- */
+#content.about-me-content{
+    min-height: 80%;
+    height: auto;
+    width: 75%;
+    text-align: center;
+    padding-bottom: 40px;
+
+    display: block;
+    font-family: "Tibetan Machine Uni", sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 0.9px;
+}
+
+#content.about-me-content .about-me-content ul{
+    width: auto;
+    list-style-type: lower-roman;
+}
+#content.about-me-content .about-me-content ul li{
+    width: auto;
+    text-align: justify;
+}
+
+#content.about-me-content .list-div a{
+    text-decoration: none;
+}
+#content.about-me-content .list-div a:hover{
+    color: #036aa0;
+}
+
+/* -- List Style-- */
+.about-me-content .list-div{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+.about-me-content h2{
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+/* -- Small Intro --*/
+#content.about-me-content > #formal_intro{
+    border-bottom: 2px solid #137472;
+}
+.about-me-content h1, .about-me-content p{
+    width: 100%;
+}
+.about-me-content h1{
+    color: #990000;
+}
+
+/* --- Top Border --- */
+#movies_list, #moods_div, #fun_facts_div{
+    border-top: 2px solid #137472;
+}
+
+/* -- Movie List --*/
+#movies_list .list-div{
+    width: 40%;
+    text-align: center;
+}
+
+/* ToolTip */
+#movies_list .tooltip {
+    position: relative;
+    display: inline-block;
+}
+#movies_list .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 500px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 0;
+    margin-left: -60px;
+}
+#movies_list .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+#movies_list .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* -- Mood Div --*/
+#moods_div{
+    padding-bottom: 30px;
+}
+#moods_div .mood-picture-div{
+    padding: 0 30px;
+    text-align: center;
+}
+.mood-picture-div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+.mood-picture-div .picture-div{
+    width: 25%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px;
+
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
+}
+.mood-picture-div .picture-div:hover{
+    cursor: pointer;
+    box-shadow: 5px 0 30px blue;
+    -webkit-box-shadow: 5px 0 30px blue;
+    -moz-box-shadow: 5px 0 30px blue;
+}
+.mood-picture-div .picture-div img{
+    width: 100%;
+    height: 250px;
+}
+.mood-picture-div .picture-div p{
+    margin: 0;
+}
+
+/* --- Fun Facts --- */
+#fun_facts_div li{
+    font-family: "Times New Roman", sans-serif;
+    color: darkgoldenrod;
+}
+#fun_facts_div .mood-picture-div li:first-child{
+    font-family: "Arial", Serif;
+    color: blue;
 }
