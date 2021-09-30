@@ -1,0 +1,16 @@
+ul{
+    background-color: red;
+    box-sizing: content-box;
+    padding: 20px;
+    text-align: center;
+}
+
+li{
+    display: inline;
+    list-style-type: none;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    vertical-align: middle;
+}

@@ -1,0 +1,21 @@
+.content{
+    width: 500px;
+    background-color: silver;
+    padding: 10px;
+    height: 350px;
+}
+
+h1{
+    background-color: yellow;
+}
+h2{
+    margin-top: 0;
+}
+
+.first-div, .second-div{
+    display: inline;
+    float: right;
+    background-color: aqua;
+    width: 100px;
+    margin-left: 10px;
+}
