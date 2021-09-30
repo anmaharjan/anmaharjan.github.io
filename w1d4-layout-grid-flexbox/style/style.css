@@ -1,0 +1,123 @@
+body{
+    padding: 2px;
+}
+/* --------------- Layout Container --------------- */
+.layout-container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 60px 400px 60px;
+}
+
+/* ------ Header ------ */
+.header{
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.header p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: auto;
+}
+
+/* ------ Nav-Bar ------ */
+.nav-bar{
+    display: flex;
+    background-color: #12381f;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 18px 15px;
+    border-right: 3px solid black;
+}
+.nav-bar a:hover{
+    background-color: #257241;
+}
+
+/* ------ Column Content ------ */
+.column-container{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+}
+/* Changing the order of columns in Flex-Box */
+/* Need to place 'Column 2' at the end in the view with width less than 600*/
+.column-container :nth-child(2) {
+    order: 3;
+}
+
+.column-first{
+    background-color: darkgray;
+    width: 50%;
+}
+.column-second{
+    background-color: rgba(169, 169, 169, 0.65);
+    width: 100%;
+}
+.column-third{
+    background-color: rgba(169, 169, 169, 0.29);
+    width: 50%;
+}
+.column-first p, .column-third p, .column-second p{
+    padding: 10px;
+}
+
+/* - Changing the view based on width of the screen - */
+@media screen and (min-width: 600px) {
+    /* Changing the order of columns in Flex-Box */
+    /* Need to place 'Column 2' at the middle in the view with width greater than 600*/
+    .column-container :nth-child(3) {
+        order: 3;
+    }
+
+    .column-second{
+        width: 50%;
+    }
+    .column-first, .column-third{
+        width: 25%;
+    }
+}
+
+/* ------ Footer ------ */
+.footer{
+    background-color: #12381f;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.footer p{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    margin: auto;
+    color: white;
+}
+
+/* ------- Validator logo ------- */
+#validator_logo{
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    opacity: 50%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+#validator_logo img{
+    width: 60px;
+    height: 30px;
+}
