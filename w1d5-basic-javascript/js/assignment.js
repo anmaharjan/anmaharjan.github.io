@@ -38,7 +38,7 @@ const max = function (a, b){
 
 // Testing
 console.log('\n');
-console.log('----------------- Testing max() -----------------');
+console.log('----------------- 1. Testing max() -----------------');
 console.log("Expected output of max(55, 33) is 55", myFunctionTest(55, max(55, 33)));
 console.log("Expected output of max(2, -3) is 2", myFunctionTest(2, max(2, -3)));
 
@@ -66,7 +66,7 @@ const maxOfThree = function (a, b, c){
 
 // Testing
 console.log('\n');
-console.log('----------------- Testing maxOfThree() -----------------');
+console.log('----------------- 2. Testing maxOfThree() -----------------');
 console.log("Expected output of maxOfThree(55, 33,88) is 88", myFunctionTest(88, maxOfThree(55, 33, 88)));
 console.log("Expected output of maxOfThree(2, -3, -90) is 2", myFunctionTest(2, maxOfThree(2, -3, -90)));
 
@@ -81,7 +81,7 @@ const isVowel = function (s){
 
 // Testing
 console.log('\n');
-console.log('----------------- Testing isVowel() -----------------');
+console.log('----------------- 3. Testing isVowel() -----------------');
 console.log("Expected output of isVowel(a) is true", myFunctionTest(true, isVowel('a')));
 console.log("Expected output of isVowel(y) is false", myFunctionTest(false, isVowel('y')));
 
@@ -103,11 +103,11 @@ let arr2 = [10, 20, 30, 40, 50]; // sum = 150, multiply=12000000
 
 // Testing
 console.log('\n');
-console.log('----------------- Testing sum() -----------------');
+console.log('----------------- 4. Testing sum() -----------------');
 console.log("Expected output of sum([1, 2, 3, 4]) is 10", myFunctionTest(10, sum(arr1)));
 console.log("Expected output of sum([10, 20, 30, 40, 50]) is 150", myFunctionTest(150, sum(arr2)));
 
-console.log('----------------- Testing multiply() -----------------');
+console.log('----------------- 4. Testing multiply() -----------------');
 console.log("Expected output of multiply([1, 2, 3, 4]) is 24", myFunctionTest(24, multiply(arr1)));
 console.log("Expected output of multiply([10, 20, 30, 40, 50]) is 12000000", myFunctionTest(12000000, multiply(arr2)));
 
@@ -125,7 +125,7 @@ const reverse = function (st){
 
 // Testing
 console.log('\n');
-console.log('----------------- Testing reverse() -----------------');
+console.log('----------------- 5. Testing reverse() -----------------');
 console.log("Expected output of reverse('Javascript is awesome') is 'emosewa si tpircsavaJ'", myFunctionTest('emosewa si tpircsavaJ', reverse('Javascript is awesome')));
 console.log("Expected output of reverse('Google is god') is 'dog si elgooG'", myFunctionTest('dog si elgooG', reverse('Google is god')));
 
@@ -145,7 +145,7 @@ const findLongestWord = function (arr){
 
 // Testing
 console.log('\n');
-console.log('----------------- Testing findLongestWord() -----------------');
+console.log('----------------- 6. Testing findLongestWord() -----------------');
 console.log("Expected output of findLongestWord(['Maharishi', 'International', 'University']) is 13", myFunctionTest(13, findLongestWord(['Maharishi', 'International', 'University'])));
 console.log("Expected output of findLongestWord(['a', 'bb', 'ccc', 'dddd', 'eeeee']) is 5", myFunctionTest(5, findLongestWord(['a', 'bb', 'ccc', 'dddd', 'eeeee'])));
 
@@ -158,32 +158,31 @@ const filterLongWords = function (arr, i){
 
 // Testing
 console.log('\n');
-console.log('----------------- Testing findLongestWord() [Order of an item doesn\'t matter]-----------------');
+console.log('----------------- 7. Testing findLongestWord() [Order of an item doesn\'t matter]-----------------');
 console.log("Expected output of filterLongWords(['Maharishi', 'International', 'University']) is ['International']", myFunctionTest(['International'], filterLongWords(['Maharishi', 'International', 'University'], 10)));
 console.log("Expected output of filterLongWords(['a', 'bb', 'ccc', 'dddd', 'eeeee']) is ['eeeee', 'dddd', 'ccc']", myFunctionTest(['eeeee', 'dddd', 'ccc'], filterLongWords(['a', 'bb', 'ccc', 'dddd', 'eeeee'], 2)));
 
 /* --------------------------------------------------------------------------------------- */
 
 /* 8. Modifying the jsfiddle on the map/filter/reduce slide. */
-document.writeln("<br/><br/><br/>Modifying the JSFiddle code<br/><br/>");
-
 const a = [1,3,5,3,3];
 
 const b = a.map(function(elem, i, array) {
     return elem * 10;
 })
-document.writeln(b.toString() + "<br/>");
 
 const c = a.filter(function(elem, i, array){
     return elem === 3;});
-document.writeln(c.toString() + "<br/>");
 
 const d = a.reduce(function(prevValue, elem, i, array){
     return prevValue * elem;
 });
-document.writeln(d+ "<br/>");
 
-const d2 = a.find(function(elem) {return elem > 1;}); //3
-const d3 = a.findIndex(function(elem) {return elem > 1;}); //1
-document.writeln(d2+ "<br/>");
-document.writeln(d3);
+// Testing
+console.log('\n');
+console.log('----------------- 8. Testing JS Fiddle Code-----------------');
+console.log("Expected output of mapping [1,3,5,3,3] array is [10,30,50,30,30]", myFunctionTest([10,30,50,30,30], b));
+console.log("Expected output of filtering [1,3,5,3,3] array is [3,3,3]", myFunctionTest([3,3,3], c));
+console.log("Expected output of reducing [1,3,5,3,3] array is 135", myFunctionTest(135, d));
+
+/* --------------------------------------------------------------------------------------- */
