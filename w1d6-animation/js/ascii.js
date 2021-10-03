@@ -34,7 +34,7 @@ window.onload = () => {
         clearInterval(animationInverval);
         // starts the new interval with the new data and sets it to variable
         animationInverval = setInterval(performAnimation, speed);
-    }
+    };
 
     /* -- Event Handling for Start Button -- */
     start.onclick = () => {
