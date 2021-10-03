@@ -63,10 +63,16 @@ window.onload = () => {
         // sets the animation content into the text area.
         textArea.innerHTML = selectedAnimation;
 
-        // splits the animation content into the array.
-        frames = selectedAnimation.toString().split('=====\n');
-        // gets the length of the array.
-        length = frames.length;
+        if(selectedAnimation !== ''){
+            // splits the animation content into the array.
+            frames = selectedAnimation.toString().split('=====\n');
+            // gets the length of the array.
+            length = frames.length;
+        }
+        else{
+            frames = null;
+            length = 0;
+        }
     };
 
     /* -- Event Handling for changing font-size -- */
