@@ -1,4 +1,6 @@
 window.onload = () => {
+    "use strict";
+
     let start = document.getElementById("start");
     let stop = document.getElementById("stop");
 
