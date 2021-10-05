@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webform 2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/jpg" href="../assets/smiley.png"/>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-between">
+    <ul class="navbar-nav">
+      <li class="nav-item active  pr-3">
+        <a class="nav-link" href="#">MUM Golden Dome Market:::SRM System</a>
+      </li>
+      <li class="nav-item border-left pr-3 pl-3">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+      <li class="nav-item border-left pr-3 pl-3">
+        <a class="nav-link" href="#">Suppliers</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-1">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hello!</a>
+        </li>
+      </ul>
+      <button class="btn btn-light" type="submit" formaction="../index.html">Sign Out</button>
+    </form>
+  </nav>
+
+  <h4 class="mr-3 m-5 text-dark">New Product Form</h4>
+  <form class="justify-content-between">
+    <div class="row mr-5 ml-5">
+      <div class="col">
+        <div class="form-group">
+          <label for="product-number">Product number</label>
+          <input type="text" class="form-control" id="product-number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" pattern="[a-zA-Z0-9\s]*" required>
+        </div>
+
+        <div class="form-group">
+          <label for="unit-price">Unit price</label>
+          <input type="number" class="form-control" id="unit-price" placeholder="0.0" step="0.01" required>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="quantity">Quantity in stock</label>
+          <input type="number" class="form-control" id="quantity" placeholder="0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="supplier">Supplier:</label>
+          <select class="form-control" id="supplier" required>
+            <option value="" selected disabled hidden>Select a supplier</option>
+            <option>Supplier1</option>
+            <option>Supplier2</option>
+            <option>Supplier3</option>
+            <option>Supplier4</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date-supplied">Date supplied</label>
+          <input type="text" class="form-control" id="date-supplied" placeholder="yyyy-mm-dd" pattern="(19|20)[0-9]{2}[-]{1}(0[1-9]|1[0-2])[-]{1}(0[1-9]|1[0-9]|2[0-9]|3[0-1])" required>
+          <small id="date-help" class="form-text text-muted">Enter a valid Date</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-row-reverse m-5">
+      <button type="submit" class="btn btn-outline-info">Add Product</button>
+      <button type="reset" class="btn btn-outline-warning mr-5">Cancel</button>
+      <button type="reset" class="btn btn-outline-primary mr-5">Reset</button>
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.login-form{
+    font-size: 17px;
+    font-family: "Arial", sans-serif;
+    width: 50%;
+    margin: 50px auto;
+    border: 1px solid #c7c7c7;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.input-div{
+    margin-top: 20px;
+}
+label, input{
+    width: 95%;
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #e0e0e0;
+    margin-top: 10px;
+    border-width: 1px;
+}
+input:active{
+    border-color: #e0e0e0;
+}
+
+.checkbox-div{margin-top: 20px;}
+.checkbox-div input{
+    width: auto;
+}
+
+.submit-btn{
+    margin-top: 20px;
+    width: 110px;
+    height: 45px;
+    background-color: #3e3ef8;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.checkbox-div input, .checkbox-div label, .submit-btn:hover{
+    cursor: pointer;
+}
+
+span.blur{
+    font-size: 13px;
+    color: #a1a1a1;
+}

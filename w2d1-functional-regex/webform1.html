@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebForm 1</title>
+
+    <link href="style/webform1.css" rel="stylesheet"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="../assets/smiley.png"/>
+</head>
+<body>
+    <form class="login-form">
+        <div class="input-div">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter Email" />
+            <span class="blur">We'll never share your email address with anyone else.</span>
+        </div>
+
+        <div class="input-div">
+          <label for="password">Password </label>
+          <input type="password" id="password" name="password" placeholder="Password" required
+                 pattern="(?=[0-9A-Za-z]+).{10,}"
+                 title="Password must be at least 10 character. It must contain at least one number, one uppercase and one lowercase"/>
+        </div>
+
+        <div class="checkbox-div">
+            <input id = "check_me_out" type="checkbox"/>
+            <label for="check_me_out">Check me out</label>
+        </div>
+
+        <div class="input-div">
+            <label for="url">URL </label>
+            <input type="text" id="url" name="url" placeholder="URL" required
+                   pattern="^http(s)?://.*"
+                   title="Must start with http or https and must be url"/>
+        </div>
+
+        <input type="submit" value="Submit" class="submit-btn" id="submit_btn">
+    </form>
+</body>
+</html>
