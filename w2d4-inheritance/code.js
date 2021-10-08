@@ -1,7 +1,7 @@
 /* -- Question 1 -- */
-String.prototype.filter = function(word){
+String.prototype.filter = function(...words){
       let arr = this.split(" ");
-      return arr.filter(a => a !== word).join(" ");
+      return arr.filter(a => !words.includes(a)).join(" ");
 };
 /* -- Question 2 -- */
 Array.prototype.bubbleSort = function(){

@@ -4,8 +4,8 @@ describe("String Test", function(){
             assert.equal("This house is nice!", "This house is not nice!".filter('not'))
         });
 
-        it("Expected output of filter('You are a good person') is 'You are a person'", function(){
-            assert.equal("You are a person", "You are a good person".filter('good'))
+        it("Expected output of filter('You are a good person') is 'You person'", function(){
+            assert.equal("You person", "You are a good person".filter('good', 'a', 'are'))
         });
     });
 });
