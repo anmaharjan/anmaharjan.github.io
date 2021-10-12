@@ -19,15 +19,13 @@ describe("Account Class Test", () => {
         it("If deposit amount is zero, then generate RangeError exception", () => {
             let account = new Account(55);
 
-            expect(() => account.deposit(0)).to.throw(RangeError);
-            expect(() => account.deposit(0)).to.throw('Deposit amount has to be greater than zero');
+            assert.throws(() => account.deposit(0), RangeError, 'Deposit amount has to be greater than zero');
         });
 
         it("If deposit amount is less than zero, then generate RangeError exception", () => {
             let account = new Account(55);
 
-            expect(() => account.deposit(-100)).to.throw(RangeError);
-            expect(() => account.deposit(-100)).to.throw('Deposit amount has to be greater than zero');
+            assert.throws(() => account.deposit(-100), RangeError, 'Deposit amount has to be greater than zero');
         });
 
         it("If deposit amount is greater than zero, then it will add to the balance", () => {
@@ -44,24 +42,21 @@ describe("Account Class Test", () => {
             let account = new Account(44);
             account.deposit(500);
 
-            expect(() => account.withdraw(0)).to.throw(RangeError);
-            expect(() => account.withdraw(0)).to.throw('Withdraw amount has to be greater than zero');
+            assert.throws(() => account.withdraw(0), RangeError, 'Withdraw amount has to be greater than zero');
         });
 
         it('If withdraw amount is less than zero, then it will generate RangeError exception', () => {
             let account = new Account(44);
             account.deposit(500);
 
-            expect(() => account.withdraw(-120)).to.throw(RangeError);
-            expect(() => account.withdraw(-120)).to.throw('Withdraw amount has to be greater than zero');
+            assert.throws(() => account.withdraw(-120), RangeError,'Withdraw amount has to be greater than zero');
         });
 
         it('If the total balance is less than the withdrawing amount, then it will generate Error exception', () => {
             let account = new Account(44);
             account.deposit(500);
 
-            expect(() => account.withdraw(-120)).to.throw(Error);
-            expect(() => account.withdraw(1200)).to.throw('Insufficient funds');
+            assert.throws(() => account.withdraw(1200), Error, 'Insufficient funds');
         });
 
         it('If withdraw amount is legit, then it will subtract the amount from the total balance.', () => {
@@ -107,8 +102,7 @@ describe('SavingsAccount Class Test', () => {
         it("If current balance is zero, then generate RangeError exception", () => {
             let account = new SavingsAccount(44123, 10);
 
-            expect(() => account.addInterest()).to.throw(RangeError);
-            expect(() => account.addInterest()).to.throw('Balance amount must be greater than zero');
+            assert.throws(() => account.addInterest(), RangeError, 'Balance amount must be greater than zero');
         });
 
         it("If current balance is greater than zero, then it will add interest to the current total balance.", () => {
@@ -158,8 +152,7 @@ describe('CheckingAccount Class Test', () => {
             let account = new CheckingAccount(44123, 1500);
             account.deposit(2000);
 
-            expect(() => account.withdraw(6000)).to.throw(RangeError);
-            expect(() => account.withdraw(6000)).to.throw('Withdraw amount has crossed the over draft limit');
+            assert.throws(() => account.withdraw(6000), RangeError, 'Withdraw amount has crossed the over draft limit');
         });
 
         it("If the withdrawing amount is less than the sum of current balance and overdraft limit," +
