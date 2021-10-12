@@ -32,9 +32,16 @@ $(function () {
                 "css": {
                     "top": top, "left": left, "background-color": color,
                     "width": width + "px", "height": width + "px", "border-radius": width + "px",
+                    "cursor" : "pointer"
                 },
                 "click": function (){
                     $(this).hide();
+                },
+                "mouseenter": function(){
+                    $(this).css({"opacity": "60%"});
+                },
+                "mouseleave": function(){
+                    $(this).css("opacity", "100%");
                 }
             }));
         }
