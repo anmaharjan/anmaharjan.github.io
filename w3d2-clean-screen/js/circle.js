@@ -1,5 +1,9 @@
 $(function () {
     const minPosition = 10, maxPosition = 90;
+
+    let randomNoGenerator = (min, max) => Math.floor(Math.random() * (max - min) + min);
+    let randomColorGenerator = () => Math.floor(Math.random()*16777215).toString(16);
+
     let circleContainer = $("#circle_container");
     /* -- input fields -- */
     let width = 0,growthAmount = 0, growthRate = 0, numberOfCircle = 0;
@@ -18,9 +22,9 @@ $(function () {
 
     function drawCircles(){
         for(let i=0; i<numberOfCircle; i++){
-            let top = Math.floor(Math.random() * (maxPosition - minPosition) + minPosition) + "%",
-                left = Math.floor(Math.random() * (maxPosition - minPosition) + minPosition) + "%",
-                color = "#" + Math.floor(Math.random()*16777215).toString(16);
+            let top = randomNoGenerator(minPosition, maxPosition) + "%",
+                left = randomNoGenerator(minPosition, maxPosition) + "%",
+                color = "#" + randomColorGenerator();
 
             circleContainer.append($("<div>", {
                 "id" : "circle-"+i,
@@ -37,34 +41,17 @@ $(function () {
     }
 
     function animateCircles(){
-        console.log($('.circle').style());
-        // let interval = setInterval(() =>{
-        //     $('.circle')
-        //         .css({
-        //             "height": (idx, old) => parseInt(old) + growthAmount + "px",
-        //             "width": (idx, old) => parseInt(old) + growthAmount + "px",
-        //             "border-radius": (idx, old) => parseInt(old) + growthAmount + "px"
-        //         });
-        // }, growthRate);
+        let interval = setInterval(() =>{
+            $('.circle')
+                .css({
+                    "height": (idx, old) => (parseInt(old) + parseInt(growthAmount)) + "px",
+                    "width": (idx, old) => (parseInt(old) + parseInt(growthAmount)) + "px",
+                    "border-radius": (idx, old) => (parseInt(old) + parseInt(growthAmount)) + "px"
+                });
+        }, growthRate);
     }
 
     function emptyCircleContainer(){
         circleContainer.empty();
     }
-
-    /*let interval = setInterval(() =>{
-        let circle = $(".circle");
-        if(parseInt(circle.css('height')) > 100){
-            clearInterval(interval);
-        }
-        $('.circle')
-            .css({
-                "height": (idx, old) => parseInt(old) + 10 + "px",
-                "width": (idx, old) => parseInt(old) + 10 + "px",
-                "border-radius": (idx, old) => parseInt(old) + 10 + "px"
-            })
-            .click(function(){
-                $(this).hide();
-            });
-    }, 250);*/
 });
