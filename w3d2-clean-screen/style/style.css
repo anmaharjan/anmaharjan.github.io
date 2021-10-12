@@ -1,0 +1,59 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container{
+    position: relative;
+    height: 100%;
+}
+/* --------- Circle Styles --------- */
+.circle-container{
+    height: 100%;
+    position: relative;
+}
+.circle{
+    position: absolute;
+    /*top: 45%;*/
+    /*left: 45%;*/
+    /*background-color: cyan;*/
+    /*border-radius: 50px;*/
+    /*height: 80px;*/
+    /*width: 80px;*/
+}
+
+/* --------- Input Gadget Styles --------- */
+.input-gadgets{
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    background-color: transparent;
+    width: 250px;
+}
+
+.form-item{
+    margin: 15px 10px;
+    font-size: 18px;
+    font-family: Serif, serif;
+}
+.form-item span{
+    display: block;
+    margin-bottom: 10px;
+}
+.form-item input{
+    padding:5px;
+    border-radius: 4px;
+    width: 100%;
+}
+.form-item button{
+    width: 50%;
+    height: 40px;
+    background-color: blue;
+    color: white;
+}
+.form-item button:hover{
+    background-color: #7a7ad5;
+    cursor: pointer;
+}

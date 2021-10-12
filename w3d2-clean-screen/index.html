@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="WAP Course">
+    <meta name="keywords" content="HTML, CSS, WAP, MIU, About Students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Screen</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="../assets/smiley.png"/>
+    <!-- Adding External Style -->
+    <link rel="stylesheet" href="style/style.css"/>
+    <!-- Adding JQuery and JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/circle.js" rel="script"></script>
+</head>
+<body>
+    <div class="main-container">
+      <div id="circle_container" class="circle-container">
+<!--          <div class="circle"></div>-->
+      </div>
+      <div class="input-gadgets">
+          <div class="form-item">
+              <label>
+                  <span>Width:</span>
+                  <input type="number" id="width" value="40" placeholder="Width"/>
+              </label>
+          </div>
+
+          <div class="form-item">
+              <label>
+                  <span>Growth Amount:</span>
+                  <input type="number" id="growth_amount" value="10" placeholder="Growth Amount"/>
+              </label>
+          </div>
+
+          <div class="form-item">
+              <label>
+                  <span>Growth Rate:</span>
+                  <input type="number" id="growth_rate" value="250" placeholder="Growth Rate"/>
+              </label>
+          </div>
+
+          <div class="form-item">
+              <label>
+                  <span>Number of circles:</span>
+                  <input type="number" id="number_of_circle" value="1" placeholder="Number of circles"/>
+              </label>
+          </div>
+
+          <div class="form-item">
+              <button id="start">Start</button>
+          </div>
+      </div>
+    </div>
+</body>
+</html>
