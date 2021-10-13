@@ -1,4 +1,6 @@
 $(function (){
+    "use strict";
+
     let isGameOn = false;
 
     let maze = $("div#maze");
