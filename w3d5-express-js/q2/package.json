@@ -1,0 +1,14 @@
+{
+  "name": "q2",
+  "version": "1.0.0",
+  "description": "q2 assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anish Maharjan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
