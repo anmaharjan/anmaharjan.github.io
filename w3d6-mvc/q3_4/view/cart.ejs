@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<%- include('head.ejs')%>
+<body>
+<div class="grid-container">
+    <%- include('navbar.ejs')%>
+
+    <div class="header">
+        <h2><%= highlight %></h2>
+    </div>
+
+    <h2>Total Amount: $<%=totalAmount%></h2>
+    <div class="contentCart">
+        <% for (let i in cartList) { %>
+            <div class="item">
+                <form action="/updateCart" method="post">
+                    <h3><%= cartList[i].getProduct().getName() %></h3>
+                    <h2>Items: <%= cartList[i].getCount() %></h2>
+                    <h2>Cost : $ <%= cartList[i].getTotalCost() %></h2>
+                    <input type="hidden" name="prodId" value="<%= cartList[i].getProduct().getId()%>"/>
+                    <input type="number" name="prodCount" placeholder="How many?"/>
+                    <br/>
+                    <input type="submit" value="Edit">
+                </form>
+            </div>
+        <% } %>
+    </div>
+    <%- include('footer.ejs')%>
+</div>
+</body>
+</html>

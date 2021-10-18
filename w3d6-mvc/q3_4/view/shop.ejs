@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<%- include('head.ejs')%>
+<body>
+<div class="grid-container">
+    <%- include('navbar.ejs')%>
+
+    <div class="header">
+        <h2><%= highlight %></h2>
+    </div>
+
+    <div class="content">
+        <% for (let i in productList) { %>
+            <div class="item">
+                <h3><a href="/product/<%= productList[i].getId() %>"><%= productList[i].getName() %></a></h3>
+                <h2>$ <%= productList[i].getPrice() %></h2>
+                <p><%= productList[i].getDescription() %></p>
+                <h6><%= productList[i].getId() %></h6>
+            </div>
+        <% } %>
+    </div>
+    <%- include('footer.ejs')%>
+</div>
+</body>
+</html>
