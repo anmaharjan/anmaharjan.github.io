@@ -1,1 +1,4 @@
 .idea
+
+**/node_modules
+w3d6-mvc/node_modules
