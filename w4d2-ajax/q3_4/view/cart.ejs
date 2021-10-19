@@ -13,7 +13,7 @@
     <div class="contentCart">
         <% for (let i in cartList) { %>
             <div class="item">
-                <form id="update">
+                <form action="/updateCart" method="post">
                     <h3><%= cartList[i].product.name %></h3>
                     <h2>Items: <%= cartList[i].count %></h2>
                     <h2>Cost : $ <%= cartList[i].totalCost %></h2>

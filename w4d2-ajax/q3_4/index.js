@@ -34,13 +34,13 @@ productList.push(apple);
 
 app.get('/', (req, res) => {
     res.render('shop', {title: "Electronic Shop",
-        highlight: "Welcome!! Customer is always right.", productList: productList });
+        highlight: "Welcome!! Customer is always right.", productList: productList, cartSize: getCartSize(req) });
 });
 
 app.get('/product/:id', (req, res) => {
     let prod = productList.filter((p) =>  p.getId() === parseInt(req.params.id))[0];
     res.render('product', {title: prod.getName(), highlight: 'Product Details of ' + prod.getName(),
-        product: prod});
+        product: prod, cartSize: getCartSize(req)});
 });
 
 /* ---------- Cart Lists ----------*/
@@ -48,7 +48,7 @@ app.get('/cart', (req, res) => {
     let cartList = req.session.cartList!==undefined ? req.session.cartList : [];
     let totalAmount = cartList.reduce((sum, cart) => cart.totalCost + sum, 0);
     res.render('cart', {title: 'Cart', highlight: "Your shopping cart.",
-        cartList: cartList, totalAmount: totalAmount});
+        cartList: cartList, totalAmount: totalAmount, cartSize: getCartSize(req)});
 });
 
 app.post('/addToCart', (req, res) => {
@@ -57,7 +57,9 @@ app.post('/addToCart', (req, res) => {
     let prodCount = data.prodCount;
 
     addOrUpdateCartList(req, prodId, prodCount);
-    res.redirect('/cart');
+    res.write(JSON.stringify({cartSize: getCartSize(req)}));
+    res.status(200);
+    res.end();
 });
 
 app.post('/updateCart', (req, res) => {
@@ -68,6 +70,9 @@ app.post('/updateCart', (req, res) => {
     res.redirect('/cart');
 });
 
+function getCartSize(req){
+    return req.session.cartList!==undefined ? req.session.cartList.length : 0;
+}
 function addOrUpdateCartList(req, prodId, prodCount){
     let cartList = req.session.cartList!==undefined ? req.session.cartList : [];
     let isPresent = cartList.filter(li => li.product.id === parseInt(prodId));

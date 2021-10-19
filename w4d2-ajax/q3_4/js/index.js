@@ -7,10 +7,12 @@ $(() => {
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8"
         }).done((res) => {
+            let json = JSON.parse(res);
             $(".message-div").empty()
                 .text('Success!! Added to the cart.')
                 .addClass('success')
                 .removeClass('error');
+            $("#cart_size").empty().text(json.cartSize);
         }).fail(() => {
             $(".message-div").empty()
                 .text('Error!! Cannot add to the cart.')
@@ -18,5 +20,5 @@ $(() => {
                 .removeClass('success');
         });
         return false;
-    })
+    });
 });

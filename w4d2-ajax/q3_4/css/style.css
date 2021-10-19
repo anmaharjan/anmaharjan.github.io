@@ -20,6 +20,7 @@ body {
 
 .navbar li {
     float: left;
+    position: relative;
 }
 
 .navbar li a {
@@ -32,6 +33,20 @@ body {
 li a:hover {
     background-color: #c0cb13;
     color: black;
+}
+
+li span{
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    color: white;
+    top: 5%;
+    right: 0;
+    z-index: 500;
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 .content {
