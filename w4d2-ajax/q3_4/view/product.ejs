@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<%- include('head.ejs')%>
+<body>
+<div class="grid-container">
+    <%- include('navbar.ejs')%>
+
+    <div class="header">
+        <h2><%= highlight %></h2>
+    </div>
+
+    <div class="message-div"></div>
+    <div class="content">
+        <div class="item">
+            <form id="add">
+                <h3><%= product.getName() %></h3>
+                <h2>$ <%= product.getPrice() %></h2>
+                <p><%= product.getDescription() %></p>
+                <input type="hidden" name="prodId" value="<%= product.getId()%>"/>
+                <input type="number" name="prodCount" placeholder="How many?"/>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+    </div>
+    <%- include('footer.ejs')%>
+</div>
+</body>
+</html>

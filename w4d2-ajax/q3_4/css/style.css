@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.header {
+    background-color: #35e8bd;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7b0270;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #c0cb13;
+    color: black;
+}
+
+.content {
+    margin: 10px 0;
+    display: -webkit-flex;
+    display: flex;
+    color: black;
+    -webkit-column-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contentCart {
+    margin: 5px;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    color: black;
+    -webkit-column-gap: 15px;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.item h6{
+    padding: 0;
+    bottom: 0;
+}
+
+.footer {
+    background-color: #35e8bd;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.message-div{
+    margin: 10px 5px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.success{
+    color: green;
+}
+.error{
+    color: red;
+}
