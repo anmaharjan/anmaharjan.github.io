@@ -1,0 +1,60 @@
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.error{
+    /*margin-top: 20px;*/
+    color: red;
+    text-align: center;
+}
+.hidden{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+
+form{
+    width: 60%;
+    margin: 40px auto;
+}
+
+form div, form div input{
+    width: 100%;
+}
+form div input#text_box{
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+form div input#text_box:focus{
+    outline: none;
+    border-color: #ef4444;
+}
+
+form div#btn-div{
+    display: flex;
+}
+form div input#btn{
+    margin-top: 10px;
+    height: 50px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    background-color: #3232dc;
+    color: white;
+}
+form div input#btn:hover{
+    background-color: white;
+    color: #3232dc;
+    border-color: #3232dc;
+    cursor: pointer;
+}
