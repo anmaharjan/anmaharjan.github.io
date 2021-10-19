@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Demo</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+        <% for(let key of Object.keys(cookies)) {%>
+            <tr>
+                <td><%= key %></td>
+                <td><%= cookies[key] %></td>
+            </tr>
+        <%}%>
+
+    </table>
+    <form method="post" action="/addCookie">
+        <label>Key <input type="text" name="key"/></label><br/>
+        <label>Value <input type="text" name="value"/></label><br/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
